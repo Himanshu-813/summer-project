@@ -14,7 +14,7 @@ if (isset($_POST['reset'])) {
     $_SESSION['board'] = array_fill(0, 9, '');
     $_SESSION['turn'] = 'X';
     $_SESSION['winner'] = '';
-    header("Location: index.php");
+    header("Location: project.php");
     exit;
 }
 
