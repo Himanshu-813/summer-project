@@ -11,8 +11,9 @@ if (isset($_POST['mode'])) {
 
 // Handle reset
 if (isset($_POST['reset'])) {
-    session_unset();
-    session_destroy();
+    $_SESSION['board'] = array_fill(0, 9, '');
+    $_SESSION['turn'] = 'X';
+    $_SESSION['winner'] = '';
     header("Location: index.php");
     exit;
 }
